@@ -6,7 +6,9 @@
                             {{ post.published_date }}
                         </div>
                         <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+			{% autoescape off %}
                         <p>{{ post.text|linebreaksbr }}</p>
+			{% endautoescape %}
                         <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a>	
                     </div>
                 {% endfor %}
