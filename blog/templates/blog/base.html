@@ -31,10 +31,12 @@
         </div>
     </div>
     <div class="sidebar">
-<h1>Projects:</h1>
+Projects:
+<div class="sidelink">
 {% for post in posts %}
-<a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+<hr></br><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
 {% endfor %}
+</div>
 </div>
 
 </body>
