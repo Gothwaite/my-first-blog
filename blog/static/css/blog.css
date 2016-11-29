@@ -14,7 +14,7 @@ body {
 }
 .sidebar {
     float: right;
-    margin-right: 20%;
+    margin-right: 10%;
     width: 15%;
     background: #A5A5A5;
     text-align: center;
@@ -22,8 +22,8 @@ body {
 }
 .content {
     float: left;
-    margin-left: 20%;
-    width: 45%;
+    margin-left: 10%;
+    width: 65%;
 
 }
 ul {
