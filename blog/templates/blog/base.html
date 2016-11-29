@@ -24,7 +24,7 @@
     </div>
     <div class="content container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-m-8">
             {% block content %}
             {% endblock %}
             </div>		
@@ -36,6 +36,7 @@ Projects:
 {% for post in posts %}
 <hr><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
 {% endfor %}
+</br>
 </div>
 </div>
 
