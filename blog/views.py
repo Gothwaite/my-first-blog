@@ -26,7 +26,7 @@ def post_publish(request, pk):
 def post_detail(request, pk):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'blog/post_detail.html', {'post': post}, , {'posts:' posts})
+    return render(request, 'blog/post_detail.html', {'post': post, 'posts': posts})
 @login_required
 def post_new(request):
     if request.method == "POST":
