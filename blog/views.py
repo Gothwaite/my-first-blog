@@ -80,4 +80,5 @@ def comment_remove(request, pk):
     return redirect('post_detail', pk=post_pk)
 
 def about_me(request):
-    return render(request, 'blog/about_me.html')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/about_me.html', {'posts': posts})
