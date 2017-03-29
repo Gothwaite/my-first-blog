@@ -78,5 +78,5 @@ def comment_remove(request, pk):
     comment.delete()
     return redirect('post_detail', pk=post_pk)
 
-def about(request):
+def about_me(request):
     return render(request, 'blog/about_me.html')
